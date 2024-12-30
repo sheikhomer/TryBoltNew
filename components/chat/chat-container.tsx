@@ -5,7 +5,7 @@ import { ChatMessage } from "./message";
 import { ChatInput } from "./input";
 import { ScrollArea } from "@/components/ui/scroll-area";
 
-const INITIAL_MESSAGE = "Hi! I'm your AI assistant from Optimizer. How can I help you today?";
+const INITIAL_MESSAGE = "Hi! I'm your AI assistant from Adaptimize. How can I help you today?";
 
 export function ChatContainer() {
   const [messages, setMessages] = useState([
@@ -29,7 +29,7 @@ export function ChatContainer() {
   return (
     <div className="flex flex-col h-screen">
       <div className="flex items-center justify-between px-6 py-4 border-b">
-        <h2 className="text-lg font-semibold">Chat with Optimizer AI</h2>
+        <h2 className="text-lg font-semibold">Chat with Adaptimize AI</h2>
       </div>
       <ScrollArea className="flex-1">
         <div className="flex flex-col">

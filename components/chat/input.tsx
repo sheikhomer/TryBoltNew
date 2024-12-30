@@ -36,7 +36,7 @@ export function ChatInput({ onSend, isLoading }: ChatInputProps) {
           ref={textareaRef}
           value={message}
           onChange={(e) => setMessage(e.target.value)}
-          placeholder="Message Optimizer..."
+          placeholder="Message Adaptimize..."
           className="min-h-[60px] resize-none"
           onKeyDown={(e) => {
             if (e.key === "Enter" && !e.shiftKey) {

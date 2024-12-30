@@ -9,7 +9,7 @@ import { ChatPanel } from '@/components/chat/chat-panel';
 const inter = Inter({ subsets: ['latin'] });
 
 export const metadata: Metadata = {
-  title: 'Optimizer - Digital Marketing Agency',
+  title: 'Adaptimize - Digital Marketing Agency',
   description: 'Leading digital marketing agency specializing in PPC, SEO, and digital transformation.',
 };
 

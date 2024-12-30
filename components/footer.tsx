@@ -13,7 +13,7 @@ export function Footer() {
                 <Cpu className="h-6 w-6 md:h-8 md:w-8" />
                 <div className="absolute -inset-0.5 bg-primary-foreground/20 blur-sm rounded-full" />
               </div>
-              <span className="font-bold text-lg md:text-xl">Optimizer</span>
+              <span className="font-bold text-lg md:text-xl">Adaptimize</span>
             </Link>
             <p className="text-sm md:text-base text-primary-foreground/80 max-w-xs">
               Leading digital marketing agency specializing in data-driven solutions.
@@ -57,7 +57,7 @@ export function Footer() {
         {/* Copyright */}
         <div className="mt-8 pt-8 border-t border-primary-foreground/20 text-center">
           <p className="text-sm text-primary-foreground/60">
-            &copy; {new Date().getFullYear()} Optimizer Digital. All rights reserved.
+            &copy; {new Date().getFullYear()} Adaptimize Digital. All rights reserved.
           </p>
         </div>
       </div>

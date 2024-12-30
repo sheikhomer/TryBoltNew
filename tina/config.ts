@@ -32,6 +32,12 @@ export default defineConfig({
         name: "post",
         label: "Posts",
         path: "content/posts",
+        ui: {
+          router: ({ document }) => {
+            console.log(document._sys.filename);                  
+            return `/blog/${document._sys.filename}`;
+          },
+        },
         fields: [
           {
             type: "string",
@@ -47,10 +53,10 @@ export default defineConfig({
             isBody: true,
           },
         ],
-        ui: {
-          // This is an DEMO router. You can remove this to fit your site
-          router: ({ document }) => `/demo/blog/${document._sys.filename}`,
-        },
+        // ui: {
+        //   // This is an DEMO router. You can remove this to fit your site
+        //   router: ({ document }) => `/demo/blog/${document._sys.filename}`,
+        // },
       },
     ],
   },

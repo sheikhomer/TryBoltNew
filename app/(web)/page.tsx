@@ -7,16 +7,31 @@ export default function Home() {
   return (
     <div className="flex flex-col min-h-screen">
       {/* Hero Section */}
-      <section className="pt-32 pb-16 px-4 bg-gradient-to-br from-primary/5 to-primary/10">
+      <section className="pt-32 pb-16 px-4">
         <div className="container mx-auto">
-          <div className="max-w-3xl">
-            <h1 className="text-5xl md:text-6xl font-bold mb-6">
-              Accelerate Your Digital Growth
-            </h1>
-            <p className="text-xl text-muted-foreground mb-8">
-              We're a digital marketing agency that combines data science with digital marketing to drive exceptional results.
-            </p>
-            <Button size="lg">Get Started</Button>
+          <div className="flex flex-col md:flex-row items-center gap-8 md:gap-12">
+            {/* Hero Image */}
+            <div className="w-full md:w-1/2 order-1 md:order-1">
+              <Image
+                src="/assets/hero-image.png"
+                alt="Digital Growth Illustration"
+                width={600}
+                height={600}
+                priority
+                className="w-full h-auto md:h-full"
+              />
+            </div>
+
+            {/* Hero Text */}
+            <div className="w-full md:w-1/2 order-2 md:order-2">
+              <h1 className="text-3xl md:text-4xl font-bold mb-6">
+                Accelerate Your Digital Growth
+              </h1>
+              <p className="text-xl text-muted-foreground mb-8">
+                We're a digital marketing agency that combines data science with digital marketing to drive exceptional results.
+              </p>
+              <Button size="lg">Get Started</Button>
+            </div>
           </div>
         </div>
       </section>

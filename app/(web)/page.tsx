@@ -11,7 +11,7 @@ import React from "react";
 export default function Home() {
   const [api, setApi] = React.useState<CarouselApi>();
   const [isPaused, setIsPaused] = React.useState(false);
-  const SLIDE_INTERVAL = 5000; // Adjust this value to change slide duration (in milliseconds)
+  const SLIDE_INTERVAL = 8000; // Adjust this value to change slide duration (in milliseconds)
 
   useEffect(() => {
     if (!api || isPaused) {
@@ -108,7 +108,7 @@ export default function Home() {
                 <div className="flex flex-col md:flex-row items-center gap-8 md:gap-12">
                   <div className="w-full md:w-1/2 order-1 md:order-1">
                     <Image
-                      src="/assets/hero-marketing.svg"
+                      src="/assets/hero-biz.svg"
                       alt="Results Illustration"
                       width={600}
                       height={600}
@@ -135,7 +135,7 @@ export default function Home() {
       </section>
 
       {/* Services Section */}
-      <section className="py-2 px-4">
+      <section className="py-2 px-4 pb-16">
         <div className="container mx-auto">
 
           <div className="grid md:grid-cols-3 gap-8">

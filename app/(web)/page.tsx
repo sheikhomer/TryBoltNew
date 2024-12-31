@@ -11,7 +11,7 @@ import React from "react";
 export default function Home() {
   const [api, setApi] = React.useState<CarouselApi>();
   const [isPaused, setIsPaused] = React.useState(false);
-  const SLIDE_INTERVAL = 10000; // Adjust this value to change slide duration (in milliseconds)
+  const SLIDE_INTERVAL = 15000; // Adjust this value to change slide duration (in milliseconds)
 
   useEffect(() => {
     if (!api || isPaused) {
@@ -45,8 +45,8 @@ export default function Home() {
       {/* Hero Section */}
       <section className="pt-32 pb-16 px-4">
         <div className="container mx-auto">
-          <Carousel 
-            setApi={setApi} 
+          <Carousel
+            setApi={setApi}
             opts={{ loop: true }}
             className="cursor-pointer"
             onMouseEnter={handleInteraction}
@@ -68,12 +68,12 @@ export default function Home() {
                   </div>
                   <div className="w-full md:w-1/2 order-2 md:order-2">
                     <h1 className="text-3xl md:text-4xl font-bold mb-6">
-                      Accelerate Your Digital Growth
+                      Adaptimize: Transforming Marketing Strategies with AI-Powered Precision
                     </h1>
                     <p className="text-xl text-muted-foreground mb-8">
                       Adaptimize is a results-driven digital agency that harnesses the power of AI and advanced data science to revolutionize the marketing strategy.
                     </p>
-                    <Button size="lg">Get Started</Button>
+                    <Button size="lg">Book a Free Strategy Session</Button>
                   </div>
                 </div>
               </CarouselItem>
@@ -93,12 +93,12 @@ export default function Home() {
                   </div>
                   <div className="w-full md:w-1/2 order-2 md:order-2">
                     <h1 className="text-3xl md:text-4xl font-bold mb-6">
-                      Data-Driven Decisions
+                      Comprehensive Technology Solutions for Businesses
                     </h1>
                     <p className="text-xl text-muted-foreground mb-8">
-                      Transform your marketing with advanced analytics and AI-powered insights for better ROI.
+                      Adaptimize delivers cutting-edge AI, web development, CRM, and IT outsourcing solutions to drive business growth.
                     </p>
-                    <Button size="lg">Learn More</Button>
+                    <Button size="lg">Book a Free Consultation</Button>
                   </div>
                 </div>
               </CarouselItem>
@@ -118,12 +118,12 @@ export default function Home() {
                   </div>
                   <div className="w-full md:w-1/2 order-2 md:order-2">
                     <h1 className="text-3xl md:text-4xl font-bold mb-6">
-                      Proven Results
+                      Small Business Specialist: Your One-stop Partner for Marketing and Tech 
                     </h1>
                     <p className="text-xl text-muted-foreground mb-8">
-                      Join hundreds of businesses achieving exceptional growth with our proven strategies.
+                      Adaptimize specializes in affordable, tailored IT and marketing solutions to fuel small business growth.
                     </p>
-                    <Button size="lg">View Case Studies</Button>
+                    <Button size="lg">Book a Free Strategy Session</Button>
                   </div>
                 </div>
               </CarouselItem>

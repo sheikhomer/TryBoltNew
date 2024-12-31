@@ -11,7 +11,7 @@ import React from "react";
 export default function Home() {
   const [api, setApi] = React.useState<CarouselApi>();
   const [isPaused, setIsPaused] = React.useState(false);
-  const SLIDE_INTERVAL = 8000; // Adjust this value to change slide duration (in milliseconds)
+  const SLIDE_INTERVAL = 10000; // Adjust this value to change slide duration (in milliseconds)
 
   useEffect(() => {
     if (!api || isPaused) {

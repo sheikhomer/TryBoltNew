@@ -17,9 +17,9 @@ export function ChatToggleButton({ isOpen, onClick }: ChatToggleButtonProps) {
       onClick={onClick}
     >
       {isOpen ? (
-        <X className="h-5 w-5" />
+        <X className="h-5 w-5" color="#18CB96" />
       ) : (
-        <MessageCircle className="h-5 w-5" />
+        <MessageCircle className="h-5 w-5" color="#18CB96" />
       )}
     </Button>
   );

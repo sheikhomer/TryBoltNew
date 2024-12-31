@@ -12,7 +12,7 @@ export function Header() {
     return (
         <header className="fixed w-full bg-white/95 backdrop-blur supports-[backdrop-filter]:bg-white/60 z-50 border-b">
            <nav className="container mx-auto px-4 h-24 flex items-center justify-between">
-                <div className="flex items-center">
+                <div className="flex items-center w-full md:w-auto justify-center md:justify-start">
                     <Logo />
                 </div>
 

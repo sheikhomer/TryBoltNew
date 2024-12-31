@@ -1,45 +1,143 @@
+"use client"
+
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { BarChart, Search, Target } from "lucide-react";
 import Image from "next/image";
+import { Carousel, CarouselApi, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel"
+import { useEffect } from 'react';
+import React from "react";
 
 export default function Home() {
+  const [api, setApi] = React.useState<CarouselApi>();
+  const [isPaused, setIsPaused] = React.useState(false);
+  const SLIDE_INTERVAL = 5000; // Adjust this value to change slide duration (in milliseconds)
+
+  useEffect(() => {
+    if (!api || isPaused) {
+      return;
+    }
+
+    // Start autoplay
+    const interval = setInterval(() => {
+      api.scrollNext();
+    }, SLIDE_INTERVAL); // Using the constant instead of hardcoded value
+
+    // Cleanup on unmount
+    return () => clearInterval(interval);
+  }, [api, isPaused]);
+
+  const handleInteraction = () => {
+    setIsPaused(true);
+  };
+
+  const handleArrowClick = (direction: 'prev' | 'next') => {
+    if (direction === 'prev') {
+      api?.scrollPrev();
+    } else {
+      api?.scrollNext();
+    }
+    setIsPaused(false);
+  };
+
   return (
     <div className="flex flex-col min-h-screen">
       {/* Hero Section */}
       <section className="pt-32 pb-16 px-4">
         <div className="container mx-auto">
-          <div className="flex flex-col md:flex-row items-center gap-8 md:gap-12">
-            {/* Hero Image */}
-            <div className="w-full md:w-1/2 order-1 md:order-1">
-              <Image
-                src="/assets/hero-image.png"
-                alt="Digital Growth Illustration"
-                width={600}
-                height={600}
-                priority
-                className="w-full h-auto md:h-full"
-              />
-            </div>
+          <Carousel 
+            setApi={setApi} 
+            opts={{ loop: true }}
+            className="cursor-pointer"
+            onMouseEnter={handleInteraction}
+            onTouchStart={handleInteraction}
+          >
+            <CarouselContent>
+              {/* First Slide */}
+              <CarouselItem>
+                <div className="flex flex-col md:flex-row items-center gap-8 md:gap-12">
+                  <div className="w-full md:w-1/2 order-1 md:order-1">
+                    <Image
+                      src="/assets/hero-marketing.svg"
+                      alt="Digital Growth Illustration"
+                      width={600}
+                      height={600}
+                      priority
+                      className="w-full h-auto md:h-full"
+                    />
+                  </div>
+                  <div className="w-full md:w-1/2 order-2 md:order-2">
+                    <h1 className="text-3xl md:text-4xl font-bold mb-6">
+                      Accelerate Your Digital Growth
+                    </h1>
+                    <p className="text-xl text-muted-foreground mb-8">
+                      Adaptimize is a results-driven digital agency that harnesses the power of AI and advanced data science to revolutionize the marketing strategy.
+                    </p>
+                    <Button size="lg">Get Started</Button>
+                  </div>
+                </div>
+              </CarouselItem>
 
-            {/* Hero Text */}
-            <div className="w-full md:w-1/2 order-2 md:order-2">
-              <h1 className="text-3xl md:text-4xl font-bold mb-6">
-                Accelerate Your Digital Growth
-              </h1>
-              <p className="text-xl text-muted-foreground mb-8">
-                We're a digital marketing agency that combines data science with digital marketing to drive exceptional results.
-              </p>
-              <Button size="lg">Get Started</Button>
-            </div>
-          </div>
+              {/* Second Slide */}
+              <CarouselItem>
+                <div className="flex flex-col md:flex-row items-center gap-8 md:gap-12">
+                  <div className="w-full md:w-1/2 order-1 md:order-1">
+                    <Image
+                      src="/assets/hero-tech.svg"
+                      alt="Technology Illustration"
+                      width={600}
+                      height={600}
+                      priority
+                      className="w-full h-auto md:h-full"
+                    />
+                  </div>
+                  <div className="w-full md:w-1/2 order-2 md:order-2">
+                    <h1 className="text-3xl md:text-4xl font-bold mb-6">
+                      Data-Driven Decisions
+                    </h1>
+                    <p className="text-xl text-muted-foreground mb-8">
+                      Transform your marketing with advanced analytics and AI-powered insights for better ROI.
+                    </p>
+                    <Button size="lg">Learn More</Button>
+                  </div>
+                </div>
+              </CarouselItem>
+
+              {/* Third Slide */}
+              <CarouselItem>
+                <div className="flex flex-col md:flex-row items-center gap-8 md:gap-12">
+                  <div className="w-full md:w-1/2 order-1 md:order-1">
+                    <Image
+                      src="/assets/hero-marketing.svg"
+                      alt="Results Illustration"
+                      width={600}
+                      height={600}
+                      priority
+                      className="w-full h-auto md:h-full"
+                    />
+                  </div>
+                  <div className="w-full md:w-1/2 order-2 md:order-2">
+                    <h1 className="text-3xl md:text-4xl font-bold mb-6">
+                      Proven Results
+                    </h1>
+                    <p className="text-xl text-muted-foreground mb-8">
+                      Join hundreds of businesses achieving exceptional growth with our proven strategies.
+                    </p>
+                    <Button size="lg">View Case Studies</Button>
+                  </div>
+                </div>
+              </CarouselItem>
+            </CarouselContent>
+            <CarouselPrevious onClick={() => handleArrowClick('prev')} />
+            <CarouselNext onClick={() => handleArrowClick('next')} />
+          </Carousel>
         </div>
       </section>
 
       {/* Services Section */}
-      <section className="py-24 px-4">
+      <section className="py-2 px-4">
         <div className="container mx-auto">
-          <h2 className="text-3xl font-bold text-center mb-16">Our Services</h2>
+
           <div className="grid md:grid-cols-3 gap-8">
             <Card>
               <CardContent className="pt-6">

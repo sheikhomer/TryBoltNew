@@ -2,11 +2,17 @@
 
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
-import { BarChart, Search, Target } from "lucide-react";
 import Image from "next/image";
 import { Carousel, CarouselApi, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel"
 import { useEffect } from 'react';
 import React from "react";
+import { FbIcon } from "@/components/social-icon/fb-icon";
+import { YoutubeIcon } from "@/components/social-icon/youtube-icon";
+import { LinkedinIcon } from "@/components/social-icon/linkedin-icon";
+import { TiktokIcon } from "@/components/social-icon/tiktok-icon";
+import { GoogleIcon } from "@/components/social-icon/google-icon";
+import { InstagramIcon } from "@/components/social-icon/instagram-icon";
+import { Brain, Globe } from "lucide-react";
 
 export default function Home() {
   const [api, setApi] = React.useState<CarouselApi>();
@@ -133,14 +139,119 @@ export default function Home() {
           </Carousel>
         </div>
       </section>
+      {/* Services Section */}
+      <section className="py-2 px-4 pb-16">
+        <div className="container mx-auto">
+          <div className="text-center mb-4">
+            <h2 className="text-3xl font-bold mb-4">Comprehensive Marketing & Tech Solutions for SMBs</h2>
+            <p className="text-xl pb-4" style={{ color: "#373643" }}>
+              Combining data science with marketing to deliver exceptional growth.
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-3 gap-8 pb-8">
+            <Card>
+              <CardContent className="pt-6">
+                <FbIcon />
+                <h3 className="text-xl font-semibold mb-2">Facebook Ads</h3>
+                <p className="text-muted-foreground">
+                  Drive organic growth with data-driven SEO strategies tailored to your business.
+                </p>
+              </CardContent>
+            </Card>
+            <Card>
+              <CardContent className="pt-6">
+                <YoutubeIcon />
+                <h3 className="text-xl font-semibold mb-2">Youtube Ads</h3>
+                <p className="text-muted-foreground">
+                  Maximize ROI with targeted paid search and social advertising campaigns.
+                </p>
+              </CardContent>
+            </Card>
+            <Card>
+              <CardContent className="pt-6">
+                <LinkedinIcon />
+                <h3 className="text-xl font-semibold mb-2">LinkedIn Ads</h3>
+                <p className="text-muted-foreground">
+                  Turn data into actionable insights with advanced analytics and reporting.
+                </p>
+              </CardContent>
+            </Card>
+          </div>
+          <div className="grid md:grid-cols-3 gap-8 pb-8">
+            <Card>
+              <CardContent className="pt-6">
+                <GoogleIcon />
+                <h3 className="text-xl font-semibold mb-2">Google Search Ads</h3>
+                <p className="text-muted-foreground">
+                  Drive organic growth with data-driven SEO strategies tailored to your business.
+                </p>
+              </CardContent>
+            </Card>
+            <Card>
+              <CardContent className="pt-6">
+                <TiktokIcon />
+                <h3 className="text-xl font-semibold mb-2">TikTok Ads</h3>
+                <p className="text-muted-foreground">
+                  Maximize ROI with targeted paid search and social advertising campaigns.
+                </p>
+              </CardContent>
+            </Card>
+            <Card>
+              <CardContent className="pt-6">
+                <InstagramIcon />
+                <h3 className="text-xl font-semibold mb-2">Instagram Ads</h3>
+                <p className="text-muted-foreground">
+                  Turn data into actionable insights with advanced analytics and reporting.
+                </p>
+              </CardContent>
+            </Card>
+          </div>
+          <div className="grid md:grid-cols-3 gap-8">
+            <Card>
+              <CardContent className="pt-6">
+                <Image
+                  src="/assets/tina-icon.svg"
+                  alt="Web Development"
+                  width={48}
+                  height={48}
+                  className="mb-4 h-14 w-14 rounded-full"
+                />
+                <h3 className="text-xl font-semibold mb-2">Web Development</h3>
+                <p className="text-muted-foreground">
+                  Drive organic growth with data-driven SEO strategies tailored to your business.
+                </p>
+              </CardContent>
+            </Card>
+            <Card>
+              <CardContent className="pt-6">
+                <Brain className="mb-4 h-14 w-14 rounded-full" style={{ color: "#18CB96" }} />
+                <h3 className="text-xl font-semibold mb-2">AI Solutions for Business</h3>
+                <p className="text-muted-foreground">
+                  Maximize ROI with targeted paid search and social advertising campaigns.
+                </p>
+              </CardContent>
+            </Card>
+            <Card>
+              <CardContent className="pt-6">
+                <Globe className="mb-4 h-14 w-14 rounded-full" style={{ color: "#373643" }} />
+                <h3 className="text-xl font-semibold mb-2">IT Outsourcing</h3>
+                <p className="text-muted-foreground">
+                  Turn data into actionable insights with advanced analytics and reporting.
+                </p>
+              </CardContent>
+            </Card>
+          </div>
+        </div>
+      </section>
       {/* Marketing Section */}
       <section className="pb-16 px-4">
         <div className="container mx-auto">
-          {/* Mobile/Tablet Header */}
-          <div className="lg:hidden text-center mb-4">
-            <h2 className="text-3xl font-bold mb-4">Grow Your Business With Us</h2>
+          {/*Header */}
+          <div className="text-center mb-4">
+            <h2 className="text-3xl font-bold mb-4">Streamlined Customer Onboarding Process</h2>
             <p className="text-xl pb-4" style={{ color: "#373643" }}>
-              Your Affordable One-stop Partner For Tech and Marketing
+              Effortless integration tailored to your goals, ensuring a smooth start toward success.
             </p>
           </div>
 
@@ -200,83 +311,47 @@ export default function Home() {
               </p>
             </div>
           </div>
-        </div>
-      </section>
-      {/* Services Section */}
-      <section className="py-2 px-4 pb-16">
-        <div className="container mx-auto">
-
-          <div className="grid md:grid-cols-3 gap-8">
-            <Card>
-              <CardContent className="pt-6">
-                <Search className="h-12 w-12 mb-4 text-primary" />
-                <h3 className="text-xl font-semibold mb-2">SEO</h3>
-                <p className="text-muted-foreground">
-                  Drive organic growth with data-driven SEO strategies tailored to your business.
-                </p>
-              </CardContent>
-            </Card>
-            <Card>
-              <CardContent className="pt-6">
-                <Target className="h-12 w-12 mb-4 text-primary" />
-                <h3 className="text-xl font-semibold mb-2">PPC</h3>
-                <p className="text-muted-foreground">
-                  Maximize ROI with targeted paid search and social advertising campaigns.
-                </p>
-              </CardContent>
-            </Card>
-            <Card>
-              <CardContent className="pt-6">
-                <BarChart className="h-12 w-12 mb-4 text-primary" />
-                <h3 className="text-xl font-semibold mb-2">Analytics</h3>
-                <p className="text-muted-foreground">
-                  Turn data into actionable insights with advanced analytics and reporting.
-                </p>
-              </CardContent>
-            </Card>
+          {/* CTA Button */}
+          <div className="flex justify-center">
+            <Button size="lg">
+              Schedule a Consultation
+            </Button>
           </div>
         </div>
       </section>
 
-      {/* Case Studies Section */}
+
+      {/* Famous Quotes */}
       <section className="py-24 px-4 bg-muted">
         <div className="container mx-auto">
-          <h2 className="text-3xl font-bold text-center mb-16">Success Stories</h2>
-          <div className="grid md:grid-cols-2 gap-8">
-            <Card>
-              <CardContent className="p-0">
-                <Image
-                  src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=800&q=80"
-                  alt="Case Study"
-                  width={800}
-                  height={400}
-                  className="w-full h-48 object-cover"
-                />
-                <div className="p-6">
-                  <h3 className="text-xl font-semibold mb-2">E-commerce Growth</h3>
-                  <p className="text-muted-foreground">
-                    How we helped an e-commerce client achieve 300% growth in revenue.
-                  </p>
-                </div>
-              </CardContent>
-            </Card>
-            <Card>
-              <CardContent className="p-0">
-                <Image
-                  src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=800&q=80"
-                  alt="Case Study"
-                  width={800}
-                  height={400}
-                  className="w-full h-48 object-cover"
-                />
-                <div className="p-6">
-                  <h3 className="text-xl font-semibold mb-2">B2B Lead Generation</h3>
-                  <p className="text-muted-foreground">
-                    Driving qualified leads for a B2B SaaS company.
-                  </p>
-                </div>
-              </CardContent>
-            </Card>
+          <h2 className="text-3xl font-bold text-center mb-16">Let's partner up, adapt and optimize!</h2>
+          <div className="grid md:grid-cols-3 gap-8">
+            <div className="text-center">
+              <div className="text-5xl mb-4" style={{ color: "#18CB96" }}>"</div>
+              <p className="text-lg italic mb-6">
+              Never stop testing, and your advertising will never stop improving.
+              </p>
+              <p className="font-semibold">- David Mackenzie Ogilvy CBE</p>
+              <p className="text-sm text-muted-foreground"> Founder of Ogilvy & Mather, known as the "Father of Advertising."</p>
+            </div>
+
+            <div className="text-center">
+              <div className="text-6xl mb-4" style={{ color: "#18CB96" }}>"</div>
+              <p className="text-lg italic mb-6">
+              Content is fire. Social media is gasoline.
+              </p>
+              <p className="font-semibold">- Jay Baer</p>
+              <p className="text-sm text-muted-foreground">7th generation entrepreneur. Founder of 5 multi-million dollar companies. Author of 7 business books. Hall of Fame keynote speaker. </p>
+            </div>
+
+            <div className="text-center">
+              <div className="text-6xl mb-4" style={{ color: "#18CB96" }}>"</div>
+              <p className="text-lg italic mb-6">
+              People don't buy what you do; they buy why you do it.
+              </p>
+              <p className="font-semibold">- Simon Sinek</p>
+              <p className="text-sm text-muted-foreground">Author of "Start with Why" and "The Infinite Game."</p>
+            </div>
           </div>
         </div>
       </section>

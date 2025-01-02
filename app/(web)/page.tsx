@@ -312,7 +312,7 @@ export default function Home() {
             </div>
           </div>
           {/* CTA Button */}
-          <div className="flex justify-center">
+          <div className="flex justify-center mt-8">
             <Button size="lg">
               Schedule a Consultation
             </Button>
@@ -322,7 +322,7 @@ export default function Home() {
 
 
       {/* Famous Quotes */}
-      <section className="py-24 px-4 bg-muted">
+      <section className="py-16 px-4 bg-muted">
         <div className="container mx-auto">
           <h2 className="text-3xl font-bold text-center mb-16">Let's partner up, adapt and optimize!</h2>
           <div className="grid md:grid-cols-3 gap-8">

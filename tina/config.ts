@@ -1,4 +1,6 @@
 import { defineConfig } from "tinacms";
+import Page from "./collection/page";
+import path from "path";
 
 // Your hosting provider likely exposes this as an environment variable
 const branch =
@@ -28,12 +30,13 @@ export default defineConfig({
   // See docs on content modeling for more info on how to setup new content models: https://tina.io/docs/schema/
   schema: {
     collections: [
+      Page,
       {
         name: "post",
         label: "Posts",
         path: "content/posts",
         ui: {
-          router: ({ document }) => {                  
+          router: ({ document }) => {
             return `/blog/${document._sys.filename}`;
           },
         },
@@ -55,4 +58,5 @@ export default defineConfig({
       },
     ],
   },
+  
 });

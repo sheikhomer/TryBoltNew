@@ -10,7 +10,8 @@ export const Content = ({ data }: { data?: PageBlocksContent }) => {
     return (
         <section className="pb-16 px-4">
             <div className="container mx-auto">
-                <div className="max-w-full">
+                <div className="max-w-full  prose prose-h3:text-xl prose-h3:font-semibold prose-h3:mt-6 prose-h3:mb-2 prose-h3:text-[#18CB96]
+                prose-h4:text-lg prose-h4:font-semibold prose-h4:mt-2 prose-h4:mb-2">
                     <TinaMarkdown
                         content={data?.body ?? ""}
                         components={{

@@ -10,9 +10,10 @@ import { LinkedinIcon } from "../../components/social-icon/linkedin-icon";
 import { TiktokIcon } from "../../components/social-icon/tiktok-icon";
 import { GoogleIcon } from "../../components/social-icon/google-icon";
 import { InstagramIcon } from "../../components/social-icon/instagram-icon";
-import { Brain, Globe } from "lucide-react";
+import { Brain, ChartNoAxesCombined } from "lucide-react";
 import { Hero } from "../../components/blocks/hero";
 import { Quotes } from "../../components/blocks/quotes";
+import Link from "next/link";
 
 export default function Home() {
   return (
@@ -30,97 +31,115 @@ export default function Home() {
           </div>
 
           <div className="grid md:grid-cols-3 gap-8 pb-8">
-            <Card>
-              <CardContent className="pt-6">
-                <FbIcon />
-                <h3 className="text-xl font-semibold mb-2">Facebook Ads</h3>
-                <p className="text-muted-foreground">
-                  Drive organic growth with data-driven SEO strategies tailored to your business.
-                </p>
-              </CardContent>
-            </Card>
-            <Card>
-              <CardContent className="pt-6">
-                <YoutubeIcon />
-                <h3 className="text-xl font-semibold mb-2">Youtube Ads</h3>
-                <p className="text-muted-foreground">
-                  Maximize ROI with targeted paid search and social advertising campaigns.
-                </p>
-              </CardContent>
-            </Card>
-            <Card>
-              <CardContent className="pt-6">
-                <LinkedinIcon />
-                <h3 className="text-xl font-semibold mb-2">LinkedIn Ads</h3>
-                <p className="text-muted-foreground">
-                  Turn data into actionable insights with advanced analytics and reporting.
-                </p>
-              </CardContent>
-            </Card>
+            <Link href="/services/facebook-ads" className="block hover:scale-105 transition-transform">
+              <Card>
+                <CardContent className="pt-6">
+                  <FbIcon />
+                  <h3 className="text-xl font-semibold mb-2">Facebook Ads</h3>
+                  <p className="text-muted-foreground">
+                    Connect with your ideal audience and drive results with precision-targeted Facebook Ads from Adaptimize.
+                  </p>
+                </CardContent>
+              </Card>
+            </Link>
+            <Link href="/services/youtube-ads" className="block hover:scale-105 transition-transform">
+              <Card>
+                <CardContent className="pt-6">
+                  <YoutubeIcon />
+                  <h3 className="text-xl font-semibold mb-2">Youtube Ads</h3>
+                  <p className="text-muted-foreground">
+                    Elevate your brand and captivate your audience with impactful YouTube Ads from Adaptimize.
+                  </p>
+                </CardContent>
+              </Card>
+            </Link>
+            <Link href="/services/linkedin-ads" className="block hover:scale-105 transition-transform">
+              <Card>
+                <CardContent className="pt-6">
+                  <LinkedinIcon />
+                  <h3 className="text-xl font-semibold mb-2">LinkedIn Ads</h3>
+                  <p className="text-muted-foreground">
+                    Boost your B2B marketing strategy and reach decision-makers with tailored LinkedIn Ads from Adaptimize.
+                  </p>
+                </CardContent>
+              </Card>
+            </Link>
           </div>
           <div className="grid md:grid-cols-3 gap-8 pb-8">
-            <Card>
-              <CardContent className="pt-6">
-                <GoogleIcon />
-                <h3 className="text-xl font-semibold mb-2">Google Search Ads</h3>
-                <p className="text-muted-foreground">
-                  Drive organic growth with data-driven SEO strategies tailored to your business.
-                </p>
-              </CardContent>
-            </Card>
-            <Card>
-              <CardContent className="pt-6">
-                <TiktokIcon />
-                <h3 className="text-xl font-semibold mb-2">TikTok Ads</h3>
-                <p className="text-muted-foreground">
-                  Maximize ROI with targeted paid search and social advertising campaigns.
-                </p>
-              </CardContent>
-            </Card>
-            <Card>
-              <CardContent className="pt-6">
-                <InstagramIcon />
-                <h3 className="text-xl font-semibold mb-2">Instagram Ads</h3>
-                <p className="text-muted-foreground">
-                  Turn data into actionable insights with advanced analytics and reporting.
-                </p>
-              </CardContent>
-            </Card>
+            <Link href="/services/google-search-ads" className="block hover:scale-105 transition-transform">
+              <Card>
+                <CardContent className="pt-6">
+                  <GoogleIcon />
+                  <h3 className="text-xl font-semibold mb-2">Google Search Ads</h3>
+                  <p className="text-muted-foreground">
+                    Connect with the right audience at the right moment using highly targeted Google Search Ads from Adaptimize.
+                  </p>
+                </CardContent>
+              </Card>
+            </Link>
+            <Link href="/services/tiktok-ads" className="block hover:scale-105 transition-transform">
+              <Card>
+                <CardContent className="pt-6">
+                  <TiktokIcon />
+                  <h3 className="text-xl font-semibold mb-2">TikTok Ads</h3>
+                  <p className="text-muted-foreground">
+                    Spark conversations and drive engagement with creative and impactful TikTok Ads from Adaptimize.
+                  </p>
+                </CardContent>
+              </Card>
+            </Link>
+            <Link href="/services/instagram-ads" className="block hover:scale-105 transition-transform">
+              <Card>
+                <CardContent className="pt-6">
+                  <InstagramIcon />
+                  <h3 className="text-xl font-semibold mb-2">Instagram Ads</h3>
+                  <p className="text-muted-foreground">
+                    Share your story and inspire your audience with visually captivating Instagram Ads from Adaptimize.
+                  </p>
+                </CardContent>
+              </Card>
+            </Link>
           </div>
           <div className="grid md:grid-cols-3 gap-8">
-            <Card>
-              <CardContent className="pt-6">
-                <Image
-                  src="/assets/tina-icon.svg"
-                  alt="Web Development"
-                  width={48}
-                  height={48}
-                  className="mb-4 h-14 w-14 rounded-full"
-                />
-                <h3 className="text-xl font-semibold mb-2">Web Development</h3>
-                <p className="text-muted-foreground">
-                  Drive organic growth with data-driven SEO strategies tailored to your business.
-                </p>
-              </CardContent>
-            </Card>
-            <Card>
-              <CardContent className="pt-6">
-                <Brain className="mb-4 h-14 w-14 rounded-full" style={{ color: "#18CB96" }} />
-                <h3 className="text-xl font-semibold mb-2">AI Solutions for Business</h3>
-                <p className="text-muted-foreground">
-                  Maximize ROI with targeted paid search and social advertising campaigns.
-                </p>
-              </CardContent>
-            </Card>
-            <Card>
-              <CardContent className="pt-6">
-                <Globe className="mb-4 h-14 w-14 rounded-full" style={{ color: "#373643" }} />
-                <h3 className="text-xl font-semibold mb-2">IT Outsourcing</h3>
-                <p className="text-muted-foreground">
-                  Turn data into actionable insights with advanced analytics and reporting.
-                </p>
-              </CardContent>
-            </Card>
+            <Link href="/services/web-development" className="block hover:scale-105 transition-transform">
+              <Card>
+                <CardContent className="pt-6">
+                  <Image
+                    src="/assets/tina-icon.svg"
+                    alt="Web Development"
+                    width={48}
+                    height={48}
+                    className="mb-4 h-14 w-14 rounded-full"
+                  />
+                  <h3 className="text-xl font-semibold mb-2">Web Development</h3>
+                  <p className="text-muted-foreground">
+                    Personalize your website effortlessly with a CMS and seamlessly integrate it with powerful SaaS solutions to streamline your business operations.
+                  </p>
+                </CardContent>
+              </Card>
+            </Link>
+            <Link href="/services/data-insights" className="block hover:scale-105 transition-transform">
+              <Card>
+                <CardContent className="pt-6">
+                  <Brain className="mb-4 h-14 w-14 rounded-full" style={{ color: "#18CB96" }} />
+                  <h3 className="text-xl font-semibold mb-2">AI Driven Data Insights and Forecasting</h3>
+                  <p className="text-muted-foreground">
+                    Unlock actionable insights and accurate forecasting with AI-powered data analytics, and enhance customer engagement by integrating with an intelligent AI chatbot.
+                  </p>
+                </CardContent>
+              </Card>
+            </Link>
+            <Link href="/services/it-outsourcing" className="block hover:scale-105 transition-transform">
+              <Card>
+                <CardContent className="pt-6">
+                  <ChartNoAxesCombined className="mb-4 h-14 w-14 rounded-full" style={{ color: "#373643" }} />
+                  <h3 className="text-xl font-semibold mb-2">Free Audit</h3>
+                  <p className="text-muted-foreground">
+                    Get a Free Audit and uncover valuable, data-driven insights to take your marketing efforts to the next level.
+                  </p>
+                </CardContent>
+              </Card>
+            </Link>
           </div>
         </div>
       </section>

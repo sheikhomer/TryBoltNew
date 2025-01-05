@@ -1,6 +1,7 @@
 import { contentBlockSchema } from "../../components/blocks/content";
 import { heroBlockSchema } from "../../components/blocks/hero";
 import { Collection } from "tinacms";
+import { quotesBlockSchema } from "../../components/blocks/quotes";
 
 const Page: Collection = {
     name: "page",
@@ -32,6 +33,7 @@ const Page: Collection = {
             templates: [
                 heroBlockSchema,
                 contentBlockSchema,
+                quotesBlockSchema,
             ]
         }
     ]

@@ -71,5 +71,6 @@ blocks:
       ensure your strategy delivers measurable success. Together, we’ll drive
       sustainable growth and keep your business ahead of the curve.
     _template: content
+  - _template: quotes
 ---
 

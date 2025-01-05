@@ -2,6 +2,7 @@ import { tinaField } from "tinacms/dist/react";
 import { Page, PageBlocks } from "../../tina/__generated__/types";
 import { Hero } from "./hero";
 import { Content } from "./content";
+import { Quotes } from "./quotes";
 export const Blocks = (props: Omit<Page, "id" | "_sys" | "_values">) => {
     return (
       <>
@@ -24,6 +25,8 @@ export const Blocks = (props: Omit<Page, "id" | "_sys" | "_values">) => {
         return <Hero data={block} />;
       case "PageBlocksContent":
         return <Content data={block} />;
+      case "PageBlocksQuotes":
+        return <Quotes data={block} />;
       default:
         return null;
     }

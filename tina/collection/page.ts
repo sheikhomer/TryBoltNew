@@ -8,7 +8,7 @@ const Page: Collection = {
     path: "content/pages",
     ui: {
         router: ({ document }) => {
-            return `/${document._sys.filename}`;
+            return `/services/${document._sys.filename}`;
         }
     },
     fields: [

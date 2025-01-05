@@ -3,7 +3,7 @@
 import { useState } from "react";
 import { ChatMessage } from "./message";
 import { ChatInput } from "./input";
-import { ScrollArea } from "@/components/ui/scroll-area";
+import { ScrollArea } from "../ui/scroll-area";
 
 const INITIAL_MESSAGE = "Hi! I'm your AI assistant from Adaptimize. How can I help you today?";
 

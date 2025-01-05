@@ -1,6 +1,6 @@
 "use client";
 
-import { cn } from "@/lib/utils";
+import { cn } from "../../lib/utils";
 import { Cpu, User } from "lucide-react";
 
 interface ChatMessageProps {

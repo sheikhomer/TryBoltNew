@@ -1,6 +1,6 @@
 "use client";
 
-import { Button } from "@/components/ui/button";
+import { Button } from "../ui/button";
 import { MessageCircle, X } from "lucide-react";
 
 interface ChatToggleButtonProps {

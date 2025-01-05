@@ -2,8 +2,8 @@
 
 import { useState } from 'react';
 import Link from 'next/link';
-import { Button } from '@/components/ui/button';
-import { NavigationMenu, NavigationMenuContent, NavigationMenuItem, NavigationMenuLink, NavigationMenuList, NavigationMenuTrigger } from "@/components/ui/navigation-menu";
+import { Button } from '../ui/button';
+import { NavigationMenu, NavigationMenuContent, NavigationMenuItem, NavigationMenuLink, NavigationMenuList, NavigationMenuTrigger } from "../ui/navigation-menu";
 import { Logo } from '../logo';
 
 export function Header() {
@@ -11,7 +11,7 @@ export function Header() {
 
     return (
         <header className="fixed w-full bg-white/95 backdrop-blur supports-[backdrop-filter]:bg-white/60 z-50 border-b">
-           <nav className="container mx-auto px-4 h-24 flex items-center justify-between">
+            <nav className="container mx-auto px-4 h-24 flex items-center justify-between">
                 <div className="flex items-center w-full md:w-auto justify-center md:justify-start">
                     <Logo />
                 </div>

@@ -105,12 +105,39 @@ export const Header = () => {
             </nav>
 
             {isMenuOpen && (
-                <div className="md:hidden absolute top-24 left-0 right-0 bg-white border-b">
-                    <div className="container mx-auto px-4 py-4">
+                <div className="md:hidden fixed top-24 left-0 right-0 bg-white border-b h-screen">
+                    <div className="container mx-auto px-4 py-6">
                         <div className="flex flex-col space-y-4">
-                            <Link href="/services" className="text-lg font-medium">Services</Link>
-                            <Link href="/about" className="text-lg font-medium">About</Link>
-                            <Link href="/case-studies" className="text-lg font-medium">Case Studies</Link>
+                            <div className="space-y-4">
+                                <div className="font-medium">Marketing Services</div>
+                                <div className="pl-4 space-y-3">
+                                    <Link href="/services/facebook-ads" className="block text-sm text-muted-foreground">Facebook Ads</Link>
+                                    <Link href="/services/youtube-ads" className="block text-sm text-muted-foreground">YouTube Ads</Link>
+                                    <Link href="/services/linkedin-ads" className="block text-sm text-muted-foreground">LinkedIn Ads</Link>
+                                    <Link href="/services/google-search-ads" className="block text-sm text-muted-foreground">Google Search Ads</Link>
+                                    <Link href="/services/tiktok-ads" className="block text-sm text-muted-foreground">TikTok Ads</Link>
+                                    <Link href="/services/instagram-ads" className="block text-sm text-muted-foreground">Instagram Ads</Link>
+                                </div>
+                            </div>
+
+                            <div className="space-y-4">
+                                <div className="font-medium">AI Solutions</div>
+                                <div className="pl-4 space-y-3">
+                                    <Link href="/services/data-insights" className="block text-sm text-muted-foreground">Data Insights</Link>
+                                    <Link href="/services/ai-chatbot-integration" className="block text-sm text-muted-foreground">AI Chatbot Integration</Link>
+                                    <Link href="/services/tailored-dynamic-content-model" className="block text-sm text-muted-foreground">Tailored Dynamic Content Model</Link>
+                                </div>
+                            </div>
+
+                            <div className="space-y-4">
+                                <div className="font-medium">Tech Solutions</div>
+                                <div className="pl-4 space-y-3">
+                                    <Link href="/services/saas-integration" className="block text-sm text-muted-foreground">SaaS Integration</Link>
+                                    <Link href="/services/content-management-system" className="block text-sm text-muted-foreground">Content Management System</Link>
+                                </div>
+                            </div>
+
+                            <Link href="/services/free-audit" className="block font-medium">Free Audit</Link>
                             <Button className="w-full">Contact Us</Button>
                         </div>
                     </div>

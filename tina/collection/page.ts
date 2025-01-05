@@ -9,7 +9,7 @@ const Page: Collection = {
     path: "content/pages",
     ui: {
         router: ({ document }) => {
-            return `/services/${document._sys.filename}`;
+            return `/service-pages/${document._sys.filename}`;
         }
     },
     fields: [

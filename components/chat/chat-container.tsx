@@ -27,7 +27,7 @@ export function ChatContainer() {
   };
 
   return (
-    <div className="flex flex-col h-screen">
+    <div className="flex flex-col h-full">
       <div className="flex items-center justify-between px-6 py-4 border-b">
         <h2 className="text-lg font-semibold">Chat with Adaptimize AI</h2>
       </div>

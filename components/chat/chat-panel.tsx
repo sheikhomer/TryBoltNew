@@ -12,7 +12,7 @@ export function ChatPanel() {
     <>
       <div
         className={cn(
-          "fixed right-0 top-24 h-screen border-l bg-background shadow-lg transition-transform duration-300 ease-in-out",
+          "fixed right-0 top-24 bottom-24 border-l bg-background shadow-lg transition-transform duration-300 ease-in-out",
           "w-full md:w-[400px]",
           isOpen ? "translate-x-0" : "translate-x-full"
         )}

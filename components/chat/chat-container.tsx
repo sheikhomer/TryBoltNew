@@ -17,7 +17,7 @@ export function ChatContainer() {
   const { messages, input, handleInputChange, handleSubmit, isLoading, error } = useChat({
     initialMessages: [
       {
-        id: "1",
+        id: "0",
         role: "assistant",
         content: INITIAL_MESSAGE
       }
@@ -33,29 +33,31 @@ export function ChatContainer() {
             alt="Adaptimize AI"
             width={24}
             height={24}
-            className="h-8 w-8 rounded-full"  
+            className="h-8 w-8 rounded-full"
           />
         </div>
         <h2 className="text-lg font-semibold ml-2">Chat With Adaptimize AI</h2>
       </div>
       <ScrollArea className="flex-1">
         <div className="flex flex-col">
-          {error && (
-            <ChatMessage
-              isLoading={false}
-              message={error.message}
-              isUser={false}
-            />
-          )}
-          {messages.length > 0
-            ? messages.map((message, index) => (
+          {
+            messages.map((message, index) => (
               <ChatMessage
                 key={index}
                 message={message.content}
                 isUser={message.role === "user"}
                 isLoading={isLoading && index === messages.length - 1}
               />
-            )) : null}
+            ))
+          }
+          {error && (
+            <ChatMessage
+              isLoading={false}
+              message={"Sorry, I'm having trouble processing your request. Please try again later."}
+              isUser={false}
+            />
+          )}
+          
 
         </div>
       </ScrollArea>

@@ -18,7 +18,7 @@ export function ChatMessage({ message, isUser, isLoading = false }: ChatMessageP
       <div className="flex gap-4">
         <div className="w-10 h-10 rounded-full flex items-center justify-center shrink-0">
           {isUser ? (
-            <div className="bg-primary rounded-full p-1">
+            <div className="bg-white rounded-full p-1">
               <User className="w-6 h-6 text-primary-foreground" style={{ color: "#18CB96" }} />
             </div>
           ) : (
